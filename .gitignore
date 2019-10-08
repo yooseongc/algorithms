@@ -1,8 +1,8 @@
 
-!algs4
 algs4/*
-!algs4-data
+!algs4/README.md
 algs4-data/*
+!algs4-data/README.md
 
 # Created by .ignore support plugin (hsz.mobi)
 ### Java template
