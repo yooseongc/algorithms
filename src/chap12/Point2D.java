@@ -19,8 +19,8 @@ public final class Point2D implements Comparable<Point2D> {
     private final double y;
 
     public Point2D(double x, double y) {
-        if (Double.isInfinite(x) || Double.isInfinite(y)) throw new IllegalArgumentException("Coordinates must be finite.");
-        if (Double.isNaN(x) || Double.isInfinite(y))      throw new IllegalArgumentException("Coordinates cannot be NaN.");
+        if (Double.isNaN(x) || Double.isInfinite(x)) throw new IllegalArgumentException("Coordinates must be finite.");
+        if (Double.isNaN(y) || Double.isInfinite(y)) throw new IllegalArgumentException("Coordinates cannot be NaN.");
         this.x = (x == 0.0) ? 0.0 : x;   // convert -0.0 to +0.0
         this.y = (y == 0.0) ? 0.0 : y;   // convert -0.0 to +0.0
     }
@@ -71,6 +71,7 @@ public final class Point2D implements Comparable<Point2D> {
      * Formally, the invoking point (x0, y0) is less than the argument point (x1, y1)
      * if and only if either {@code y0 < y1} or if {@code y0 == y1} and {@code x0 < x1}.
      */
+    @Override
     public int compareTo(Point2D that) {
         if (this.y < that.y) return -1;
         if (this.y > that.y) return +1;

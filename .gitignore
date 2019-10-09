@@ -1,4 +1,5 @@
 
+paper/*
 algs4/*
 !algs4/README.md
 algs4-data/*
