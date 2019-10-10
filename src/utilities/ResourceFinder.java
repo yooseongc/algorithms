@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Scanner;
 
 public class ResourceFinder {
 
@@ -11,6 +12,11 @@ public class ResourceFinder {
 
     private ResourceFinder() {
 
+    }
+
+    public static In generateInputStream(String[] args) {
+        Scanner scanner = new Scanner(String.join(" ", args));
+        return new In(scanner);
     }
 
     public static File findResourceFile(String filename) {
