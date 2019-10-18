@@ -8,6 +8,7 @@ import utilities.StdRandom;
  */
 public class Flips {
 
+    // java Flips 100000
     public static void main(String[] args) {
         if (args.length == 0) args = new String[] { "100000" };
 

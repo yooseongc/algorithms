@@ -27,6 +27,11 @@ public class Bag<Item> implements Iterable\<Item>
 
 #### FIFO queue
 
+A FIFO queue is a collection that is based on the first-in-first-out (FIFO) policy. 
+The policy of doing tasks in the same order that they arrive is one that 
+we encounter frequently in everyday life.
+The reason why we use queue is to preserve the relational order of each items.
+
 public class Queue<Item> implements Iterable\<Item>   
 
 |         |                    |                                      |
@@ -38,6 +43,9 @@ public class Queue<Item> implements Iterable\<Item>
 | int     | size()             | number of items in the queue         |   
 
 #### Pushdown (LIFO) stack
+
+A pushdown stack is a collection that is based on the last-in-first-out (LIFO) policy.
+
 
 public class Stack<Item> implements Iterable\<Item>
 

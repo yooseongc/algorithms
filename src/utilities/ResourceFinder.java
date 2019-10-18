@@ -33,6 +33,7 @@ public class ResourceFinder {
     }
 
     public static void main(String[] args) throws IOException {
+
         File tinyW = findResourceFile("tinyW.txt");
         assert tinyW.exists();
         String contents = readFileContents(tinyW);

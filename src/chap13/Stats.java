@@ -37,6 +37,7 @@ public class Stats {
 
         StdOut.printf("Mean:    %.2f\n", mean);
         StdOut.printf("Std dev: %.2f\n", stddev);
+
     }
 
 }

@@ -11,6 +11,7 @@ public class Average {
     public static void main(String[] args) throws IOException {
 
         In in = ResourceFinder.findResourceInputStream("tinyW.txt");
+
         double sum = 0.0;
         int cnt = 0;
         while (!in.isEmpty()) {

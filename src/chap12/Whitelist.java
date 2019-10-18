@@ -7,6 +7,7 @@ import java.io.IOException;
 
 /**
  * whitelist filter --> client for StaticSETofInts
+ *
  */
 public class Whitelist {
 
