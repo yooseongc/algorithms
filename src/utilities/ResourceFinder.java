@@ -14,9 +14,13 @@ public class ResourceFinder {
 
     }
 
-    public static In generateInputStream(String[] args) {
-        Scanner scanner = new Scanner(String.join(" ", args));
+    public static In generateInputStream(String string) {
+        Scanner scanner = new Scanner(string);
         return new In(scanner);
+    }
+
+    public static In generateInputStream(String[] args) {
+        return generateInputStream(String.join(" ", args));
     }
 
     public static File findResourceFile(String filename) {

@@ -59,7 +59,7 @@ public class ResizingArrayStack<Item> implements Iterable<Item>, Stack<Item> {
     }
 
     public int size() {
-        return 0;
+        return n;
     }
 
     /**
@@ -67,7 +67,18 @@ public class ResizingArrayStack<Item> implements Iterable<Item>, Stack<Item> {
      */
     private void resize(int capacity) {
         assert capacity >= n;
+        // System.out.printf("resize %d --> %d\n", a.length, capacity);
         a = Arrays.copyOf(a, capacity);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder s = new StringBuilder();
+        for (Item item : this) {
+            s.append(item);
+            s.append(' ');
+        }
+        return s.toString();
     }
 
     @Override
