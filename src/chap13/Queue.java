@@ -33,6 +33,13 @@ public class Queue<Item> implements Iterable<Item>, interfaces.Queue<Item> {
         n = 0;
     }
 
+    public Queue(Queue<Item> queue) {
+        this();
+        for (Item item : queue) {
+            enqueue(item);
+        }
+    }
+
     public void enqueue(Item item) {
         Node<Item> oldLast = last;
         last = new Node<>();

@@ -41,11 +41,24 @@ public class LinkedList<Item> implements Iterable<Item> {
             first.item = item;
         } else {
             Node current;
-            for(current = first; current.next != null; current = current.next);
+            for (current = first; current.next != null; current = current.next);
 
             Node newNode = new Node();
             newNode.item = item;
             current.next = newNode;
+        }
+        size++;
+    }
+
+    public void addAtFront(Item item) {
+        if (isEmpty()) {
+            first = new Node();
+            first.item = item;
+        } else {
+            Node oldFirst = first;
+            first = new Node();
+            first.item = item;
+            first.next = oldFirst;
         }
         size++;
     }

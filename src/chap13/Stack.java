@@ -20,6 +20,13 @@ public class Stack<Item> implements Iterable<Item>, interfaces.Stack<Item> {
     private static class Node<Item> {
         private Item item;
         private Node<Item> next;
+
+        Node() { }
+
+        Node(Node<Item> x) {
+            item = x.item;
+            next = x.next;
+        }
     }
 
     // It should create an empty stack.
@@ -27,6 +34,18 @@ public class Stack<Item> implements Iterable<Item>, interfaces.Stack<Item> {
         first = null;
         n = 0;
     }
+
+    public Stack(Stack<Item> stack) {
+        if (stack.first != null) {
+            first = new Node<>(stack.first);
+            n++;
+            for (Node<Item> x = first; x.next != null; x = x.next) {
+                x.next = new Node<>(x.next);
+                n++;
+            }
+        }
+    }
+
 
     public void push(Item item) {
         Node<Item> oldFirst = first;
