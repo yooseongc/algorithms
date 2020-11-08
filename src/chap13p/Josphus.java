@@ -37,4 +37,14 @@ public class Josphus {
         StdOut.println();
     }
 
+    /**
+     *   0 1 2 3 4 5 6  -> r 1
+     *   0 ^ 2 3 4 5 6  -> r 3
+     *   0 2 ^ 4 5 6    -> r 5
+     *   0 2 4 ^ 6      -> r 0
+     *   ^ 2 4 6        -> r 4
+     *   2 ^ 6          -> r 2
+     *   remains : 6
+     */
+
 }

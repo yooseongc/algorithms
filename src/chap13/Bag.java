@@ -69,6 +69,15 @@ public class Bag<Item> implements Iterable<Item>, interfaces.Bag<Item> {
         };
     }
 
+    @Override
+    public String toString() {
+        String res = "";
+        for (Item item : this) {
+            res += item + " ";
+        }
+        return res;
+    }
+
     public static void main(String[] args) throws IOException {
         In inputs = ResourceFinder.findResourceInputStream("tobe.txt");
         Bag<String> bag = new Bag<>();
